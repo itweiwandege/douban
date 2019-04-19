@@ -1,0 +1,15 @@
+<!--components/indexmodule/indexmodule.wxml-->
+<!-- 电影 -->
+<view class='module-group'>
+  <!-- 1 -->
+  <view class='module-top'>
+    <view class='module-title'>{{title}}</view>
+    <!-- 跳转页面写法 -->
+    <navigator url="{{moreurl}}" class='module-more'>更多</navigator>
+  </view>
+  <!-- 2 -->
+  <scroll-view class='module-scroll-view' scroll-x="{{ true }}">
+    <!-- 抽取出去 -->
+    <itemview wx:for="{{items}}" wx:key="{{item.title}}" item="{{item}}"></itemview>
+  </scroll-view>
+</view>

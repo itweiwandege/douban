@@ -1,0 +1,9 @@
+<!--components/stars/stars.wxml-->
+<!-- 评分星星组件 -->
+<view class='rate-group'>
+  <!-- 循环3颗全星 -->
+  <image wx:key="*this" style='width:{{starssize}}rpx;height:{{strassize}}rpx;' wx:for="{{ lights }}" src='/images/rate_light.png'></image>
+  <image wx:key="*this" style='width:{{starssize}}rpx;height:{{strassize}}rpx;' wx:for="{{ halfs }}" src='/images/rate_half.png'></image>
+  <image wx:key="*this" style='width:{{starssize}}rpx;height:{{strassize}}rpx;' wx:for="{{ grays }}" src='/images/rate_gray.png '></image>
+  <text style='font-size:{{fontsize}}rpx;color:{{fontcolor}};'>{{ ratetext }}</text>
+</view>
