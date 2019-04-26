@@ -13,7 +13,7 @@
 		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.5",
+	"libVersion": "2.6.6",
 	"appid": "wxa2f5e4b78d3a0d3b",
 	"projectname": "douban1",
 	"debugOptions": {

@@ -8,17 +8,21 @@ Component({
       value: 0
     },
     // 星星大小
-    starssize : {
+    starsize : {
       type : Number,
-      value : 20  //rpx
+      value : 20  
     },
     fontsize : {
       type : Number,
-      value : 20  //rpx
+      value : 20 
     },
     fontcolor : {
       type : String,
       value : "#ccc"
+    },
+    istext : {
+      type : Boolean,
+      value : true
     }
   },
 

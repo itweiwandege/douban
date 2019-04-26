@@ -1,0 +1,39 @@
+<!--pages/detail/detail.wxml-->
+<view class='item-header'>
+  <!-- 标题 -->
+  <view class='item-title'>{{item.title}} {{item.original_title}} {{item.year}}</view>
+  <view class='item-detail'>
+    <!-- 左 -->
+    <view class='left-detail'>
+      <!-- 评分 -->
+      <view class='item-rate'>
+        <stars rate="8" starsize="30" fontsize="30"></stars>
+        <text class='comment-persons'>{{item.comment_count}}评论</text>
+      </view>
+      <!-- 主演内容 -->
+      <view class='item-sub-rate'>
+        <view class='item-type'>{{item.durations}} {{item.genres}}</view>
+        <view class='item-show'>{{item.pubdate}}上映 {{item.countries}}</view>
+        <view class='item-actors'>{{item.authors}}</view>
+      </view>
+    </view>
+    <!-- 右 -->
+    <view class='right-detail'>
+      <image src='{{item.cover.image.small.url}}'></image>
+    </view>
+  </view>
+</view>
+<!-- 标签页 -->
+<view class='item-tags'>
+  <view class='item-tags-title'>豆瓣成员常用标签</view>
+  <view class='item-tags-list'>
+    <text wx:for="{{tags}}" wx:key="*this">{{item}}</text>
+  </view>
+</view>
+<!-- 评论实现 -->
+<view class='comment-list-group'>
+  <view class='comment-title'>短评({{totalcomment}})</view>
+  <onecomment wx:for="{{comments}}" wx:key="{{item}}" item="{{item}}"></onecomment>
+</view>
+<!-- 更多热评 -->
+<navigator class="more-comment" url="/pages/comment/comment?id={{id}}&type={{type}}&thumbnail={{item.cover.image.small.url}}&title={{item.title}}&rate={{item.rating.value}}">看看更多短评</navigator>

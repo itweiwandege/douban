@@ -4,14 +4,13 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-top : 20rpx;
 }
 .rate-group image {
   width : 20rpx;
   height: 20rpx;
-
 }
 .rate-group  text {
   font-size: 20rpx;
   color: #ccc;
+  /* margin-left: 20rpx; */
 }

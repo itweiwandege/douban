@@ -1,1 +1,27 @@
 /* pages/search/search.wxss */
+.item-list-group{
+  padding: 10rpx 30rpx;
+}
+.item-group {
+  padding : 10rpx 0;
+  border-bottom:1rpx solid #e4e4e4;
+  display: flex;
+  justify-content: flex-start;
+}
+.thumbnail{
+  width:80rpx;
+  height:100rpx;
+  margin-right: 20rpx;
+}
+.right-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.item-title {
+  font-size: 32rpx;
+}
+.rate-year {
+  font-size: 28rpx;
+  color:#7b7b7b
+}

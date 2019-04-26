@@ -1,4 +1,5 @@
 // pages/search/search.js
+import {network} from "../../utils/network.js";
 Page({
 
   /**
@@ -62,5 +63,26 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  onsearchInputEvent: function(event) {
+    var that = this;
+    // console.log(event);
+    var value = event.detail.value;
+    network.getItemSearch({
+      q:value,
+      success:function(subjects){
+        that.setData({
+          subjects : subjects
+        })
+      }
+    });
+  },
+  // 监听点击搜索后的跳转页面
+  onitemTapEvent : function(event){
+    // console.log(event);
+    var id = event.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: "/pages/detail/detail?type=movie&id="+id,
+    });
   }
 })

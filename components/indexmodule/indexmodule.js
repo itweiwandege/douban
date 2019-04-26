@@ -15,7 +15,13 @@ Component({
     items: {
       type: Array,
       value: []
-    }
+    },
+  // 跳转页
+  type : {
+    type : String,
+    value : ""
+  }
+
   },
 
   /**

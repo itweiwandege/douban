@@ -1,4 +1,4 @@
-<!--components/indexmodule/indexmodule.wxml-->
+ <!--components/indexmodule/indexmodule.wxml-->
 <!-- 电影 -->
 <view class='module-group'>
   <!-- 1 -->
@@ -10,6 +10,6 @@
   <!-- 2 -->
   <scroll-view class='module-scroll-view' scroll-x="{{ true }}">
     <!-- 抽取出去 -->
-    <itemview wx:for="{{items}}" wx:key="{{item.title}}" item="{{item}}"></itemview>
+    <itemview wx:for="{{items}}" wx:key="{{item.title}}" item="{{item}}" itemurl="/pages/detail/detail?type={{type}}&id={{item.id}}"></itemview>
   </scroll-view>
 </view>

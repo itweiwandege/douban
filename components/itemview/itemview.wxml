@@ -1,6 +1,6 @@
 <!--components/itemview/itemview.wxml-->
 
-<navigator class='item-navigator'>
+<navigator wx:if="{{item}}" class='item-navigator' url="{{itemurl}}">
   <!-- 组 -->
   <view class='item-group'>
     <view class='thumbnail-group'>
@@ -12,4 +12,6 @@
     <!-- 渲染idemview  -->
     <stars rate='{{item.rating.value}} ' fontsize="20" fontcolor="green"></stars>
   </view>
+  
 </navigator>
+<view wx:else class="item-navigator"></view>

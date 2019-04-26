@@ -1,0 +1,39 @@
+/* components/onecomment/onecomment.wxss */
+/* 评论内容 */
+
+.comment-group {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 20rpx;
+}
+.left-comment{
+  width: 70rpx;
+  margin-right: 20rpx;
+}
+.avatar {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+.right-comment{
+  flex: 1;
+}
+.username-rate {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.username {
+  font-size: 32rpx;
+}
+.release-time {
+  font-size: 28rpx;
+  color: #b3b3b3;
+  margin-top: 10rpx;
+}
+.content {
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  color: #353535;
+  line-height: 50rpx;
+}

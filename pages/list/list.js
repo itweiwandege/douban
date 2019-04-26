@@ -17,7 +17,20 @@ Page({
     var that = this;
 
     var type = options.type;
+    that.setData({
+      type : type
+    });
+
     var title = "";
+    //正在加载中
+    wx.showLoading({
+      title: '正在加载中...',
+      mask: true,
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    });
+
     if(type==="movie"){
       // 请求电影的数据
       network.getMovieList({
@@ -25,6 +38,7 @@ Page({
           that.setData({
             items: items
           });
+          wx.hideLoading();
         },
         count : 1000
       })
@@ -36,6 +50,7 @@ Page({
           that.setData({
             items: items
           });
+          wx.hideLoading();
         },
         count: 100
       })
@@ -47,6 +62,8 @@ Page({
           that.setData({
             items: items
           });
+          // 隐藏加载中
+          wx.hideLoading();
         },
         count: 100
       })
